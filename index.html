@@ -1,0 +1,951 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+        <link rel="stylesheet" href="bootstrap-5.3.3-dist/css/bootstrap-grid.css">
+
+
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Rokkitt:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap">
+        <link href="https://fonts.googleapis.com/css2?family=Rokkitt:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+      
+        <title>format</title>
+        <style>
+
+            *{
+                box-sizing: border-box;
+                background-color: ;
+            }
+
+            body{ 
+                margin: 0;
+                height: auto;
+                width: 100%;
+                background-color: black;
+                overflow-x: hidden;
+            }
+            header{
+                width: 100%;
+                height: 70px;
+                display: inline-flex;
+                background-color:black;
+                position: fixed;
+                top: 0;
+                left: 0;
+                justify-content: space-between;
+                align-items:center;
+                z-index: 9999;
+            }
+            .header2{
+                position: absolute;
+                text-align: center;
+                font-size: 30px;
+                font-family: 'poppins';
+                color: white;
+                padding-left: 30px;
+            }
+            .header3{
+                position: absolute;
+                padding-bottom: 30px;
+                display: inline-flex;
+                top: 0;
+                right: 15px;
+
+            }
+            .parent{
+                background-color: aliceblue;
+                height: 1980px;
+                width: 100%;
+                margin: 0;
+            }
+            
+            ul{
+
+                display: inline-flex;
+                padding-top: 10px;
+            }
+            ul li{
+                list-style-type: none;
+                padding: 10px;
+                display: inline-flex;
+                font-size: 15px;
+                font-family: 'poppins';
+            }
+            ul li a{
+                text-decoration: none;
+                color: red;
+                border-radius: 50px;
+                padding: 5px;
+            }
+           ul li a:hover{
+                background-color: bisque;
+            }
+            ul li a:active{
+                background-color:black;
+            }
+           
+            .b2{
+                border: 1px solid;
+                width: 100%;
+                padding-left: 400px;
+            }
+            .button{
+                position: fixed;
+                bottom: 0;
+                right: 0;
+            }
+            footer{                
+                display: inline-flex;
+                background-color: #414141;
+                width: 100%;
+                height:30px;
+                position: relative;
+            }
+            .footer2{
+                position: absolute;
+                display: inline-flex;
+                flex-direction: row;
+                align-items: flex-end;
+                padding-left: 750px;
+                bottom: 0;
+
+            }
+
+            .section{
+                height: 90vh;
+                width: 100%;
+                background:transparent;
+                color: black;
+                justify-content: center;
+                align-items: center;
+                display: flex;
+            }
+
+
+            .section:before{
+                content: '';
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                height: 200px;
+                width: 100.8%;
+                background:linear-gradient(177deg, black,red);
+                clip-path: polygon(100% 0,-15% 71%,100% 100%); 
+                z-index: 2;
+
+            }
+            @media(max-width:1440px){
+                .section{
+                    height:90vh
+                }
+                .section:before{
+                    bottom:100px;
+                }
+            }
+            @media(max-width:1024px){
+                .section{
+                    height: 90vh;
+                }
+            }
+
+            .animage2{
+                top: 30px;
+                padding-top: 660px;
+                position: absolute;
+                animation: fadee 0.9s forwards;
+                animation-timeline: view();
+                animation-range-start: cover 20vh;
+                animation-range-end: contain;
+                animation-delay :1s;
+                opacity: 0;
+                z-index: 1;
+
+            }
+            @keyframes fadee{
+                from{
+                    opacity: 0;
+                    scale: 0.6;
+                }
+
+                to{
+                    opacity: 1;
+                    scale: 1;
+                }
+            }
+            @media(max-width:1440px){
+                .animage2{
+                    top: 170px;
+                }
+                .demoa{
+                    padding-bottom: 250px;
+                }
+                
+            }
+           
+            .section2{
+                height: 90vh;
+                width: 100%;
+                background:transparent;
+                color: black;
+                justify-content: center;
+                align-items: center;
+                display: flex;
+            }
+            .section2:before{
+                content: '';
+                position: absolute;
+                padding-top: 400px;
+                left: 0;
+                bottom: -700px;
+                height: 200px;
+                width: 100.8%;
+                background:linear-gradient(177deg, black,red);
+                clip-path: polygon(0 84%, 0 35%, 100% 71%, 100% 77%);
+                z-index: 2;
+
+
+            }
+            @media(max-width:1440px){
+                .aniright{
+                    top: 750px;
+                }
+            }
+            @media(max-width:1024px){
+                .section2:before{
+                 bottom: -590px;
+                 height: 150px;
+                 padding-top: 320px;
+                }
+                .aniright{
+                    font-size: 25px;
+                    top: 570px;
+                }
+                
+            }
+            
+
+            .animage{
+                top: 70px;
+                position: absolute;
+                animation: scroll 0.6s forwards;
+                /* animation-timeline: view();
+                animation-range-start: cover;
+                animation-range-end: contain 10vh; */
+                animation-delay :0.6s;
+                opacity: 0;
+                z-index: 1;
+
+            }
+            @keyframes scroll{
+                0%{ bottom:0;
+                    opacity: 0;
+
+                }
+                100%{
+                    top: px;
+                    opacity: 1;
+                }
+            }
+            .anileft{
+                top: 90px;
+                right:0;
+                width: 20%;
+                color: white;
+                position: absolute;
+                animation: right 0.6s forwards;
+                /* animation-timeline: view();
+                animation-range-start: cover;
+                animation-range-end: contain 10vh; */
+                animation-delay :0.6s;
+                opacity: 0;
+                z-index: 1;
+
+            }
+            @keyframes right{
+                0%{
+                    right:0;
+                    opacity: 0;
+                }
+                100%{
+                    right:50px;
+                    opacity:1;
+                }
+            }
+
+            .demoa{
+
+                -webkit-text-stroke: 1px rgb(216, 189, 68);
+                font-size: 200px;
+                background-image:;
+                background-clip: text;
+                background-size: cover;
+                background-repeat: no-repeat;
+                color: transparent;
+                -webkit-background-clip: text;
+                line-height: 170px;
+            }
+            .demob{
+
+                -webkit-text-stroke: 1px rgb(216, 189, 68);
+                font-size: 200px;
+                background-image:;
+                background-clip: text;
+                background-size: cover;
+                background-repeat: no-repeat;
+                color: transparent;
+                -webkit-background-clip: text;
+                line-height: 170px;
+            }
+
+            .demo{
+
+                -webkit-text-stroke: 1px rgb(216, 189, 68);
+                font-size: 200px;
+                background-image:;
+                background-clip: text;
+                background-size: cover;
+                background-repeat: no-repeat;
+                color: transparent;
+                -webkit-background-clip: text;
+                line-height: 170px;
+            }
+
+
+            @media(max-width:1440px){
+                .demo{
+                    padding-bottom: 111px;
+                }
+                .demob{
+                    padding-bottom: 350px;
+                }
+            }
+            @media(max-width:1024px){
+                .demo{
+                    font-size: 120px;
+                }
+                .anileft{
+                    font-size: 25px;
+                }
+                .animage{
+                    height: 500px;
+                }
+                .section:before{
+                    height: 150px;
+                }
+                .demob{
+                    font-size: 120px;
+                    padding-top: 400px;
+
+                }
+                
+                .demoa{
+                    font-size:120px ;
+                    line-height: 105px;
+                    padding-top: 170px;
+                }
+                .animage2{
+                top:350px;
+                padding-top: 250px;
+                height: 790px;
+            }
+            
+        }
+            .demo2{
+                 font-size: 30px;
+                 color: yellow;
+                 position: absolute;
+                 width: 20%;
+                 left: 50px;
+                 bottom: 120px;
+                 color: hsl(0 0% 100%/0.2);
+                 animation: fade 0.6s linear forwards;
+                 animation-timeline: view();
+                 animation-range-start: cover 20vh;
+                 animation-range-end: contain 50vh;
+                 background: linear-gradient(45deg,red,blue);
+                 background-clip: text;
+                 background-repeat: no-repeat;
+                 background-size: 0% 100%;
+                 z-index:;
+            }
+
+            @keyframes fade{
+                to{
+                    background-size: 100% 100%;
+                }
+            }
+            
+            @media(max-width:1440px){
+                .demo2{
+                    left: 50px;
+                    bottom:217px;
+                }
+            }
+            @media(max-width:1024px){
+                .demo2{
+                    font-size: 25px;
+                }
+                .section{
+                    height: 87vh;
+                }
+            }
+
+
+
+            .demo3{
+                 font-size: 30px;
+                 color: yellow;
+                 position: absolute;
+                 width: 21%;
+                 right: 40px; 
+                 padding-top: 450px;
+                 color: hsl(0 0% 100%/0.2);
+                 animation: fade 0.6s linear forwards;
+                 animation-timeline: view();
+                 animation-range-start: cover 50vh;
+                 animation-range-end: contain 60vh;
+                 background: linear-gradient(90deg,red,blue);
+                 background-clip: text;
+                 background-size: 0% 100%;
+                 background-repeat: no-repeat;
+                 z-index: 3;
+            }
+
+            @keyframes fade{
+                to{
+                    background-size: 100% 100%;
+                }
+            }
+            
+            @media(max-width:1440px){
+                .demo3{
+                    padding-top: 290px;
+                }
+            }
+            @media(max-width:1024px){
+                .demo3{
+                    font-size: 25px;
+                    padding-top: 400px;
+                }
+            }
+
+
+            .section3{
+                display: flex;
+                flex-wrap: wrap;
+                width: 100%;
+            
+
+
+            }
+            
+            .anitext{
+                /* position: absolute; */
+                animation: scroll 0.6s forwards;
+                /* animation-timeline: view();
+                animation-range-start: cover;
+                animation-range-end: contain 10vh; */
+                animation-delay :0.6s;
+                opacity: 0;
+                z-index: 1;
+                font-size: 20px;
+
+            }
+            @keyframes scroll{
+                0%{ bottom:100%;
+                    opacity: 0;
+
+                }
+                100%{
+                    top: 0;
+                    opacity: 1;
+                }
+            }
+
+            .aniright{
+                left:40px;
+                width: 20%;
+                color: white;
+                position: absolute;
+                animation: left 0.6s forwards;
+                /* animation-timeline: view();
+                animation-range-start: cover;
+                animation-range-end: contain 10vh; */
+                animation-delay :0.6s;
+                opacity: 0;
+                z-index: 1;
+
+            }
+            @keyframes left{
+                0%{
+                    left:0;
+                    opacity: 0;
+                }
+                100%{
+                    left:50px;
+                    opacity:1;
+                }
+            }
+
+
+            .section4{
+                height: 90vh;
+                width: 100%;
+                background:transparent;
+                color: black;
+                justify-content: center;
+                align-items: center;
+                display: flex;
+            }
+            .section4:before{
+                content: '';
+                position: absolute;
+                bottom: -1350px;
+                left: 0;
+                height: 200px;
+                width: 100.8%;
+                background:linear-gradient(177deg, black,red);
+                clip-path: polygon(100% 0,-15% 71%,100% 100%); 
+                z-index: 2;
+
+            }
+            
+            .demo4{
+                 font-size: 30px;
+                 color: yellow;
+                 position: absolute;
+                 width: 21%;
+                 left: 40px; 
+                 padding-top: 450px;
+                 color: hsl(0 0% 100%/0.2);
+                 animation: fade 0.6s linear forwards;
+                 animation-timeline: view();
+                 animation-range-start: cover 50vh;
+                 animation-range-end: contain 60vh;
+                 background: linear-gradient(90deg,red,blue);
+                 background-clip: text;
+                 background-size: 0% 100%;
+                 background-repeat: no-repeat;
+                 z-index: 3;
+            }
+
+            @keyframes fade{
+                to{
+                    background-size: 100% 100%;
+                }
+            }
+            
+            @media(max-width:1440px) {
+                .demo4{
+                    padding-top: 150px;
+                }
+            }
+            @media(max-width:1024px){
+                .demo4{
+                    padding-top: 430px;
+                    font-size: 25px;
+                }
+            }
+
+            .animage3{
+                top: 30px;
+                padding-top: 1350px;
+                position: absolute;
+                animation: fadee 0.9s forwards;
+                animation-timeline: view();
+                animation-range-start: cover 20vh;
+                animation-range-end: contain;
+                animation-delay :1s;
+                opacity: 0;
+                z-index: 1;
+            }
+
+            @keyframes fadee{
+                from{
+                    opacity: 0;
+                    scale: 0.6;
+                }
+
+                to{
+                    opacity: 1;
+                    scale: 1;
+                }
+            }
+            @media(max-width:1440px){
+                .animage3{
+                    top: 140px;
+                }
+            }
+            @media(max-width:1024px){
+                .animage3{
+                    top: 1052px;
+                    height:730px;
+                    padding-top: 179px;
+                }
+            }
+
+            .anilf{
+                top:1400px;
+                right:40px;
+                width: 20%;
+                color: white;
+                position: absolute;
+                animation: lf 0.6s forwards;
+                /* animation-timeline: view();
+                animation-range-start: cover;
+                animation-range-end: contain 10vh; */
+                animation-delay :0.6s;
+                opacity: 0;
+                z-index: 1;
+
+            }
+            @keyframes lf{
+                0%{
+                    right:0;
+                    opacity: 0;
+                }
+                100%{
+                    right:50px;
+                    opacity:1;
+                }
+            }
+            @media(max-width:1440px){
+                .anilf{
+                    top: 1550px;
+                }
+            }
+            @media(max-width:1024px){
+                .anilf{
+                    font-size: 25px;
+                    top: 1200px;
+                }
+                .section4{
+                    height: 79vh;
+                }
+                .section4:before{
+                    height: 150px;
+                    bottom: -1142px;
+                }
+
+            }
+            .parent{
+            display: flex;
+            padding: 50px;
+            padding-top: 50px;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            background-color: black;
+            height: 700px;
+        }
+        @media(max-width:1024px){
+            .parent{
+                padding: 0px;
+                padding-top: 100px;
+            }
+            
+        }
+        .card{
+            display: table-row;
+            padding: 10px;
+            flex-wrap: wrap;
+            background:linear-gradient(180deg, red,black) ;
+        }
+        .card2{
+            display: table-column;
+            height: 200px;
+        }
+        .card:hover{
+            scale:1.1;
+            background:linear-gradient(45deg, red,black) ;
+            color: white;
+        }
+    
+        .button{
+            right: 0;
+            bottom: 0;
+            position: fixed;
+            height: 40px;
+            width: 30px;
+        }
+
+        .ftr:hover{
+            text-decoration: underline red;
+        }
+      
+          </style>
+    </head>
+    <body>
+        <div class="row">
+            <div class="col-sm-12">
+        <header>
+            <div class="header2">My Films</div>
+            <div class="header3"><ul>
+                <li><a href="#home"> home</a></li>
+                <li><a href="#about"> about</a></li>
+                <li><a href="#Peaky">Peaky blinders</a></li>
+                <li><a href="#Pirates">pirates of caribbean</a></li>
+                <li><a href="#john">john wick</a></li>
+                <li><a href="#contact">contact</a></li>
+
+
+            </ul></div>
+        </header>
+        </div>
+        </div>
+        <div class="row" style="background:black; background-repeat: no-repeat; background-size: cover;">
+            <div class="col-sm-12">
+        <div class="section" id="Peaky">
+            <img src="images/pk.png" class="animage" alt="">
+            <h2 class="anileft" style="font-family:'Montserrat';">Cilian murphy as <span style="color: red;">TOMMY</span></h2>
+        
+            <h3 class="demo" style="z-index: 0; text-align: center;">Peaky blinders</h3>
+            <h2 class="demo2" style="font-family:'Montserrat';">The film was directed by <span style="color: red;">Otto Bathurst</span></h2>
+        </div>
+    </div>
+    </div>
+        <div class="row" style="background:black; background-repeat: no-repeat; background-size: cover;">
+            <div class="col-sm-12" id="Pirates">
+        <div class="section2">
+            <img src="images/captain.png" class="animage2" alt="">
+            <h2 class="aniright" style="font-family:'Montserrat';">Johnny depp as <span style="color: red;">CAPTAIN JACK SPARROWS</span></h2>
+            <h3 class="demoa" style="z-index: 0; text-align: center;">Pirates of the caribbean</h3>
+            <h2 class="demo3" style="font-family:'Montserrat';">The film was directed by <span style="color: red;">Gore verbinski</span></h2>
+        </div>
+    </div>
+    </div>
+
+    <div class="row" style="background:black; background-repeat: no-repeat; background-size: cover;">
+        <div class="col-12" id="john">
+    <div class="section4">
+        <img src="images/jw.png" class="animage3">
+        <h2 class="anilf" style="font-family:'Montserrat';">Keanu reeves as <span style="color: red;">JOHN WICK</span></h2>
+        <h3 class="demob" style="z-index: 0; text-align: center;">John wick</h3>
+        <h2 class="demo4" style="font-family:'Montserrat';">The film was directed by <span style="color: red;">Chad stahelski</span></h2>
+    </div>
+</div>
+</div>
+<br/>
+<br/>
+<br/>
+<div class="row">
+    <div class="col-lg-12">
+<div class="parent sec5" id="services">
+    <div class="card" style="width: 20rem; height: 600px;">
+        <img src="images/pirates2.jpg" height="400px" width="300px" alt="">
+        <div class="card-body">
+            <h3 style="text-align: left;">Fantasy genre</h3>
+            <h5 class="text-wrap">Pirates of the caribbean comes under this genre</h5>
+            <button class="btn btn-outline-warning">WATCH NOW</button>
+        </div>
+    </div>
+
+    <div class="card" style="width: 20rem;height: 600px;">
+        <img src="images/pk2.jpg" height="400px" width="300px" alt="">
+        <div class="card-body">
+            <h3 style="text-align: left;">Gangstar genre</h3>
+            <h5 class="text-wrap">Peaky blinders comes under this genre </h5>
+            <button class="btn btn-outline-warning">WATCH NOW</button>
+        </div>
+    </div>
+
+    <div class="card" style="width: 20rem;height: 600px;">
+        <img src="images/jw2.jpg" height="400px" width="300px" alt="">
+        <div class="card-body">
+            <h3 style="text-align: left;">Action genre</h3>
+            <h5 class="text-wrap">John whick comes under this genre</h5>
+            <button class="btn btn-outline-warning">WATCH NOW</button>
+        </div>
+    </div>
+</div>
+</div>
+</div>
+<div class="button">
+<a href="#"><i class="fa-solid fa-arrow-up" style="color: rgb(255, 255, 255);"></i></a>
+</div>
+<br/>
+
+<!-- forms begins -->
+<div class="row">
+    <div class="col-sm-12"><center><h1 style="color: white;">Which is your fav one</h1></center></div>
+</div>
+<div class="row">
+    <div class="col-sm-3"></div>
+    <div class="col-sm-6">
+<form id="">
+    <div class="container">
+<div class="form-row">
+    <div class="form-group col-md-12">
+<label for="name" class="form-label font-weight-bold" style="color: rgb(238, 236, 236);">Your name:</label>
+    <input type="text" class="form-control" id="name" placeholder="your name" style="border: 1px solid;">
+</div>
+<div class="form-row">
+    <div class="form-group col-md-12">
+<label for="email" class="form-label font-weight-bold" style="color: white;">Your mail id:</label>
+    <input type="text" class="form-control" id="email" placeholder="your mail id" style="border: 1px solid;" required>
+</div>
+<div class="form-row">
+    <div class="form-group col-md-12">
+<label for="select slot" class="form-label font-weight-bold" style="color: white;">date:</label>
+    <input type="date" class="form-control" id="select slot" placeholder="dd/mm/yyyy" style="border: 1px solid;">
+</div>
+<div class="form-row">
+<div class="form-group col-md-12">
+    <label for="exampleFormControlTextarea1" style="color: white;">Write about your fav film:</label>
+    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="keep it here"></textarea>
+  </div>
+        <br/>
+        <a href="#"><button class="btn btn-outline-secondary">submit</button></a>
+    </div>
+</div>
+</div>
+</div>
+</div>
+</form>
+</div>
+<div class="col-sm-3"></div>
+</div>
+
+
+<!-- Footer -->
+<footer
+    class="text-center text-lg-start text-white mt-5"
+    style="background-color: #0000">
+<!-- Grid container -->
+<div class="container p-4 pb-0" id="contact">
+<!-- Section: Links -->
+<section class="">
+  <!--Grid row-->
+  <div class="row">
+    <!-- Grid column -->
+    <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
+      <h6 class="text-uppercase mb-4 font-weight-bold border-bottom">
+        MY FILMS
+      </h6>
+      <p>
+        HAPPY U R A FILMY GEEK....VISIT AGAIN.
+      </p>
+    </div>
+    <!-- Grid column -->
+
+    <hr class="w-100 clearfix d-md-none" />
+
+    <!-- Grid column -->
+    <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
+      <h6 class="text-uppercase mb-4 font-weight-bold border-bottom">Products</h6>
+      <p class="ftr">
+        <a href="#" class="text-white ftr" style="text-decoration: none;">tees</a>
+      </p>
+      <p class="ftr">
+        <a href="#" class="text-white frt" style="text-decoration: none;">cam rigs</a>
+      </p>
+      <p class="ftr">
+        <a href="#" class="text-white ftr" style="text-decoration: none;">film posters</a>
+      </p>
+      <p class="ftr">
+        <a href="#" class="text-white ftr" style="text-decoration: none;">movie merchandise</a>
+      </p>
+    </div>
+    <!-- Grid column -->
+
+    <hr class="w-100 clearfix d-md-none" />
+
+    <!-- Grid column -->
+    <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3">
+      <h6 class="text-uppercase mb-4 font-weight-bold border-bottom">
+        Membership
+      </h6>
+      <p class="ftr">
+        <a href="#" class="text-white" style="text-decoration: none;">Create an Account</a>
+      </p>
+      <p class="ftr">
+        <a href="#" class="text-white" style="text-decoration: none;">log in</a>
+      </p>
+      <p class="ftr">
+        <a href="#" class="text-white" style="text-decoration: none;">refer</a>
+      </p>
+      <p class="ftr">
+        <a href="#" class="text-white" style="text-decoration: none;">Help</a>
+      </p>
+    </div>
+
+    <!-- Grid column -->
+    <hr class="w-100 clearfix d-md-none" />
+
+    <!-- Grid column -->
+    <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
+      <h6 class="text-uppercase mb-4 font-weight-bold border-bottom">Contact</h6>
+      <p class="ftr"><i class="fas fa-home mr-3"></i>vizag,seethammadhara,tpt colony</p>
+      <p class="ftr"><i class="fas fa-envelope mr-3"></i> info@gmail.com</p>
+      <p class="ftr"><i class="fas fa-phone mr-3"></i> + 01 234 567 77</p>
+      <p class="ftr"><i class="fas fa-print mr-3"></i> + 01 234 567 77</p>
+    </div>
+    <!-- Grid column -->
+  </div>
+  <!--Grid row-->
+</section>
+<!-- Section: Links -->
+
+<hr class="my-3">
+
+<!-- Section: Copyright -->
+<section class="p-3 pt-0">
+  <div class="row d-flex align-items-center">
+    <!-- Grid column -->
+    <div class="col-md-7 col-lg-8 text-center text-md-start">
+      <!-- Copyright -->
+      <div class="p-3">
+        © 2024 Copyright:
+        <a class="text-white" href="https://mdbootstrap.com/"
+           >google.com</a
+          >
+      </div>
+      <!-- Copyright -->
+    </div>
+    <!-- Grid column -->
+
+    <!-- Grid column -->
+    <div class="col-md-5 col-lg-4 ml-lg-0 text-center text-md-end">
+      <!-- Facebook -->
+      <a
+         class="btn btn-outline-light btn-floating m-1"
+         class="text-white"
+         role="button"
+         ><i class="fab fa-facebook-f"></i
+        ></a>
+
+      <!-- Twitter -->
+      <a
+         class="btn btn-outline-light btn-floating m-1"
+         class="text-white"
+         role="button"
+         ><i class="fab fa-twitter"></i
+        ></a>
+
+      <!-- Google -->
+      <a
+         class="btn btn-outline-light btn-floating m-1"
+         class="text-white"
+         role="button"
+         ><i class="fab fa-google"></i
+        ></a>
+
+      <!-- Instagram -->
+      <a
+         class="btn btn-outline-light btn-floating m-1"
+         class="text-white"
+         role="button"
+         ><i class="fab fa-instagram"></i
+        ></a>
+    </div>
+    <!-- Grid column -->
+  </div>
+</section>
+<!-- Section: Copyright -->
+</div>
+<!-- Grid container -->
+</footer>
+<!-- Footer -->
+
+    </body>
+</html>
